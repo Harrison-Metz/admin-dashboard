@@ -1,0 +1,34 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar projects announcements"
+    "sidebar projects trending";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    background-color: cornflowerblue;
+    grid-area: sidebar;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.projects, .announcements, .trending {
+    background-color: gainsboro;
+}
