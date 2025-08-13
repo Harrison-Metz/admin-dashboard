@@ -17,7 +17,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 0.5fr 3fr 3fr;
+    grid-template-rows: 0.5fr 2.5fr 2fr;
     grid-template-areas: 
     "sidebar header header"
     "sidebar projects announcements"
@@ -29,6 +29,8 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding-right: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
 }
 
 .header-top {
@@ -65,6 +67,11 @@ input {
     gap: 1rem;
 }
 
+.htr img {
+    width: 3rem;
+    height: 3rem;
+}
+
 .header-bottom {
     grid-row: 2 / 3;
     display: grid;
@@ -75,6 +82,15 @@ input {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.hbl img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.greeting p:first-child {
+    font-size: 0.8rem;
 }
 
 .hbr {
@@ -226,13 +242,45 @@ input {
 .trending {
     grid-area: trending;
     padding: 10px;
+    margin-top: 0;
 }
+
+
 
 .trending-container {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     height: max-content;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "img top"
+    "img bottom";
+}
+
+.trend img {
+    grid-area: img;
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.trend h1 {
+    grid-area: top;
+    font-size: 1rem;
+}
+
+.trend p {
+    grid-area: bottom;
+    font-size: 1rem;
+    color: gray;
 }
 
 .projects, .announcements, .trending {
@@ -242,7 +290,7 @@ input {
 .projects>h1, .announcements>h1, .trending>h1 {
     font-size: 1.3rem;
     padding-bottom: 1rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
 svg {
